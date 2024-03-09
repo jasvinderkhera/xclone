@@ -1,39 +1,44 @@
+:root {
+  --x-blue: #1d9bf0;
+  --text-gray: #71767C;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  position: relative;
   scrollbar-color: rgb(62, 65, 68) rgb(22, 24, 28);
 }
 .container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  margin: auto;
-}
-
-.left {
-  /* border: 1px solid white; */
+  position: relative;
+  align-items: center;
+  border: 1px solid black;
   min-height: 100vh;
-  width: 180px;
+  width: 1080px;
+  margin: auto;
+  display: flex;
+}
+.left {
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  width: 80px;
   overflow-y: scroll;
 }
 .left ul {
-  text-align: end;
-  /* padding: 20px 5px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
 }
 .left ul li {
   padding: 5px 5px;
-  margin-left: 95px;
   height: 55px;
   width: 60px;
   border-radius: 50%;
@@ -56,10 +61,10 @@ body {
 }
 .post-image {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   width: 60px;
-  margin-right: 15px;
-  margin-left: 95px;
   margin-bottom: 30px;
 }
 .post-image img {
@@ -71,14 +76,20 @@ body {
   background-color: rgb(43, 42, 42);
   transition: 300ms;
 }
+.rest {
+  margin-left: 80px;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100%;
+}
 .top {
   height: 55px;
-  width: 600px;
-  border: 1px solid rgb(47 51 54);
-  background-color: rgba(0, 0, 0, 0.548);
+  width: 1000px;
+  /* border: 1px solid rgb(47 51 54); */
+  background-color: rgba(0, 0, 0, 0.715);
   position: fixed;
+  display: flex;
   top: 0;
-  left: 180px;
   font-size: 16px;
   font-weight: 600;
   z-index: 1;
@@ -104,24 +115,24 @@ body {
   background-color: rgba(40, 39, 39, 0.434);
   transition: 300ms;
 }
+.nav {
+  width: 600px;
+  height: 56px;
+  border: 1px solid rgb(47 51 54);
+}
 .search {
   /* border: 1px solid white; */
   height: 55px;
-  width: 480px;
+  width: 400px;
   background-color: black;
-  position: fixed;
   display: flex;
   align-items: center;
-  right: 0;
-  top: 0;
-  z-index: 1;
 }
 .search input {
   height: 45px;
   width: 350px;
   border: none;
   border-radius: 25px;
-  position: relative;
   padding-left: 50px;
   background-color: rgb(22 24 28);
   font-size: 16px;
@@ -141,14 +152,14 @@ body {
   min-height: 100vh;
   width: calc(100% - 180px);
   position: absolute;
-  left: 180px;
   top: 55px;
   display: flex;
 }
 .main_content {
+  border: 1px solid rgb(47 51 54);
   min-height: 100vh;
   width: 600px;
-  background-color: rgb(90, 87, 87);
+  background-color: rgb(0, 0, 0);
 }
 .right {
   background-color: rgb(0, 0, 0);
@@ -208,6 +219,10 @@ body {
   transition: 300ms;
   cursor: pointer;
 }
+.content2 ul li .text{
+  /* border: 1px solid white; */
+  width: 220px;
+}
 .content2 ul li .text h4 {
   margin-bottom: 10px;
   font-size: 15px;
@@ -228,9 +243,7 @@ body {
   height: 100%;
   width: 100%;
 }
-.content2 li .more {
-  padding-left: 120px;
-}
+
 .more a {
   text-decoration: none;
   color: gray;
@@ -260,6 +273,7 @@ body {
   font-size: 14px;
 }
 .content3 h2 {
+  padding-left: 20px;
   margin-bottom: 20px;
 }
 .content3 ul li {
@@ -269,7 +283,7 @@ body {
   margin-bottom: 20px;
   padding: 8px 15px;
 }
-.content3 ul li:hover{
+.content3 ul li:hover {
   background-color: #3a3e46;
   cursor: pointer;
   transition: 300ms;
@@ -288,18 +302,18 @@ body {
   margin-bottom: 4px;
   padding: 0 5px;
 }
-.content3 ul li .name p{
+.content3 ul li .name p {
   color: rgb(113 118 123);
   padding-left: 4px;
   font-size: 16px;
 }
-.name h3 a{
+.name h3 a {
   text-decoration: none;
   color: white;
 }
-.name p a{
+.name p a {
   text-decoration: none;
-  color:  rgb(113 118 123);
+  color: rgb(113 118 123);
 }
 .follow button {
   padding: 8px 15px;
@@ -307,13 +321,13 @@ body {
   border-radius: 15px;
   border: none;
 }
-.follow button:hover{
+.follow button:hover {
   cursor: pointer;
 }
 
 /*-----Post----*/
 
-.post{
+.post {
   height: 130px;
   width: 600px;
   background-color: black;
@@ -322,28 +336,27 @@ body {
   padding-left: 20px;
   padding-top: 20px;
 }
-.profile{
+.profile {
   height: 100px;
   width: 50px;
   /* border: 1px solid #16181c; */
- 
 }
-.profile img{
+.profile img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
 }
 
-.post_section{
+.post_section {
   height: 110px;
   width: 530px;
   /* border: 1px solid #16181c; */
 }
-.post_section .input{
+.post_section .input {
   padding-bottom: 30px;
 }
 
-.post_section input{
+.post_section input {
   color: white;
   background-color: black;
   border: none;
@@ -352,19 +365,19 @@ body {
   width: 530px;
   font-size: 20px;
 }
-.post_section .icons{
+.post_section .icons {
   display: flex;
   justify-content: space-between;
 }
 
-.post_section .icons ul{
+.post_section .icons ul {
   display: flex;
   justify-content: start;
   align-items: center;
   list-style: none;
   gap: 15px;
 }
-.post_section .icons button{
+.post_section .icons button {
   background-color: #1d9bf0;
   color: white;
   font-size: 15px;
@@ -373,15 +386,126 @@ body {
   border-radius: 20px;
   margin-right: 10px;
 }
-.post_section .icons ul li a{
+.post_section .icons ul li a {
   display: block;
   height: 20px;
   width: 20px;
 }
-.post_section .icons ul li a:hover{
+.post_section .icons ul li a:hover {
   background-color: #2e3139;
 }
-.post_section .icons ul li a img{
+.post_section .icons ul li a img {
   height: 100%;
   width: 100%;
+}
+
+/*-- Posts --*/
+
+.posts_sect1 {
+  border: 1px solid rgb(47 51 54);
+  min-height: 250px;
+  width: 100%;
+  padding: 10px;
+}
+
+.upper {
+  height: 55px;
+  width: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.upper_img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.upper_img img {
+  height: 100%;
+  width: 100%;
+}
+.post_text {
+  height: 55px;
+  width: 450px;
+  /* border: 1px solid white; */
+  margin-top: 10px;
+}
+.post_text .page_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.post_text .page_name a {
+  text-decoration: none;
+  color: #71767c;
+}
+.post_text h4 {
+  margin-bottom: 5px;
+}
+.post_text img {
+  height: 18px;
+  width: 18px;
+}
+.more_icon {
+  height: 55px;
+  width: 55px;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more_icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+  color: #71767c;
+}
+.more_icon a:hover {
+  background-color: #3a3e46;
+  color: var(--x-blue);
+}
+.content_section {
+  /* border: 1px solid white; */
+  min-height: 250px;
+  width: 90%;
+  padding: 10px 8px;
+  margin-left: 55px;
+}
+.end_section {
+  /* border: 1px solid white; */
+  height: 25px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 55px;
+  margin-top: 5px;
+}
+.end_section ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-right: 30px;
+}
+.end_section ul li a {
+  text-decoration: none;
+  color: #71767c;
+}
+.end_section img {
+  height: 15px;
+  width: 15px;
+}
+.last_icon {
+  margin-left: 30px;
+}
+.last_icon a {
+  padding: 0 5px;
 }
