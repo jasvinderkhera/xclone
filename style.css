@@ -1,6 +1,6 @@
 :root {
   --x-blue: #1d9bf0;
-  --text-gray: #71767C;
+  --text-gray: #71767c;
 }
 * {
   box-sizing: border-box;
@@ -219,7 +219,7 @@ body {
   transition: 300ms;
   cursor: pointer;
 }
-.content2 ul li .text{
+.content2 ul li .text {
   /* border: 1px solid white; */
   width: 220px;
 }
@@ -437,12 +437,20 @@ body {
   align-items: center;
   gap: 8px;
 }
+.post_text .page_name h4 a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 .post_text .page_name a {
   text-decoration: none;
   color: #71767c;
 }
 .post_text h4 {
   margin-bottom: 5px;
+}
+.post_text p{
+  cursor: pointer;
 }
 .post_text img {
   height: 18px;
@@ -469,6 +477,7 @@ body {
 .more_icon a:hover {
   background-color: #3a3e46;
   color: var(--x-blue);
+  transition: 300ms
 }
 .content_section {
   /* border: 1px solid white; */
@@ -476,6 +485,16 @@ body {
   width: 90%;
   padding: 10px 8px;
   margin-left: 55px;
+}
+.content_images{
+  height: 300px;
+  width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.content_images img{
+  height: 100%;
+  width: 100%;
 }
 .end_section {
   /* border: 1px solid white; */
