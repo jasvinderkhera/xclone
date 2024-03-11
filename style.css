@@ -107,8 +107,8 @@ body {
   margin-top: 18px;
   list-style: none;
 }
-.topbutton::before{
- border: 2px solid blue;
+#button2{
+  color:#71767c;
 }
 .top ul li a {
   padding: 17px 100px;
