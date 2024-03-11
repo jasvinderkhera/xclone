@@ -32,7 +32,8 @@ body {
   background-color: black;
   color: white;
   width: 80px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .left ul {
   display: flex;
